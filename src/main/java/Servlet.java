@@ -24,7 +24,7 @@ public class Servlet {
     }
 
     private static void handleRequest(HttpExchange exchange) throws IOException {
-        String filePathString = "src/webpage" + exchange.getRequestURI().getPath();
+        String filePathString = "src/main/java/webpage" + exchange.getRequestURI().getPath();
         Path filePath = Paths.get(filePathString);
         System.out.println(filePathString);
         if (!Files.exists(filePath)) {
