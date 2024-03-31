@@ -18,6 +18,7 @@ public class Servlet {
             HttpContext context = server.createContext("/");
             context.setHandler(Servlet::handleRequest);
             server.start();
+            System.out.println("Started!");
         } catch (IOException e) {
             e.printStackTrace();
         }
