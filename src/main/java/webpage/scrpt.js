@@ -24,7 +24,7 @@ function sendToServer(data){
 
 
 // Создаем новое подключение WebSocket
-let socket = new WebSocket("ws://vm716430.vps.masterhost.tech::1234");
+let socket = new WebSocket("ws://vm716430.vps.masterhost.tech:1234");
 
 // Обработчик открытия соединения
 socket.onopen = function(e) {
