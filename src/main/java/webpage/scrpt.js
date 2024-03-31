@@ -22,7 +22,7 @@ function sendToServer(data){
 	console.log("отправлено")
 }
 
-
+/*
 // Создаем новое подключение WebSocket
 let socket = new WebSocket("ws://localhost:1234");
 
@@ -49,3 +49,4 @@ socket.onmessage = function(event) {
 socket.onerror = function(error) {
   console.log(`[error] ${error.message}`);
 };
+//*/
