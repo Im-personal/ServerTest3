@@ -22,7 +22,7 @@ function sendToServer(data){
 	console.log("отправлено")
 }
 
-/*
+
 // Создаем новое подключение WebSocket
 let socket = new WebSocket("ws://localhost:1234");
 
