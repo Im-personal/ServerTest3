@@ -7,7 +7,7 @@ function sendMessage(){
 	
 	var dname = nameText.value;
 	var dmessage = messageText.value;
-	
+	messageText.value = "";
 	var data = {
 		name: dname,
 		message: dmessage
@@ -40,7 +40,8 @@ socket.onmessage = function(event) {
   
   var msg = document.createElement("div");
   msg.innerHTML = res;
-  msgholder.appendChild(msg);
+  msgholder.insertBefore(msg, msgholder.firstChild)
+ // msgholder.appendChild(msg);
   
   
 };

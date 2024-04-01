@@ -26,6 +26,14 @@ public class Servlet {
 
     private static void handleRequest(HttpExchange exchange) throws IOException {
         String filePathString = "src/main/java/webpage" + exchange.getRequestURI().getPath();
+        switch(exchange.getRequestURI().getPath()){
+            case "/my_own_chat_OMG.cookie":
+                filePathString = "src/main/java/webpage/index.html";
+                break;
+            default:
+                filePathString = "src/main/java/webpage" + exchange.getRequestURI().getPath();
+        }
+
         Path filePath = Paths.get(filePathString);
         System.out.println(filePathString);
         if (!Files.exists(filePath)) {
@@ -38,7 +46,7 @@ public class Servlet {
 
             String mimeType = Files.probeContentType(filePath);
 
-            // Если MIME-тип не определен, установите его в "applicaввtion/octet-stream"
+            // Если MIME-тип не определен, установите его в "application/octet-stream"
             if (mimeType == null) {
                 mimeType = "application/octet-stream";
             }
